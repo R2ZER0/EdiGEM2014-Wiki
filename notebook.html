@@ -240,8 +240,8 @@ wgAjaxWatch={"watchMsg": "Watch", "unwatchMsg": "Unwatch", "watchingMsg": "Watch
     <!-- The actual content stuff -->
     <div class="content-container" id="weeks">
         
-        <button onClick="sortWeeksNewest();">Newest First</button>
-        <button onClick="sortWeeksOldest();">Oldest First</button>
+        <button class="pure-button" onClick="sortWeeksNewest();" id="sort-newest-button">Newest First</button>
+        <button class="pure-button pure-button-active" onClick="sortWeeksOldest();" id="sort-oldest-button">Oldest First</button>
         
         <div class="week" data-week="-1">
             <h2>Origin Story</h2>
@@ -486,12 +486,16 @@ wgAjaxWatch={"watchMsg": "Watch", "unwatchMsg": "Unwatch", "watchingMsg": "Watch
         $("#weeks .week").sortElements(function(a, b){
             return parseInt($(a).data('week')) < parseInt($(b).data('week')) ? 1 : -1;
         });
+        $("#sort-newest-button").addClass("pure-button-active");
+        $("#sort-oldest-button").removeClass("pure-button-active");
     }
     
     function sortWeeksOldest() {
         $("#weeks .week").sortElements(function(a, b){
             return parseInt($(a).data('week')) > parseInt($(b).data('week')) ? 1 : -1;
         });
+        $("#sort-newest-button").removeClass("pure-button-active");
+        $("#sort-oldest-button").addClass("pure-button-active");
     }
     </script>
 
