@@ -247,11 +247,29 @@ wgAjaxWatch={"watchMsg": "Watch", "unwatchMsg": "Unwatch", "watchingMsg": "Watch
     
     <!-- The actual content stuff -->
     <div class="content-container" id="weeks">
+    
+        <div class="pure-menu pure-menu-open pure-menu-horizontal">
+            <a href="#" class="pure-menu-heading">Sort By:</a>
+            <ul>
+                <li><button class="pure-button" onClick="sortWeeksNewest();" id="sort-newest-button">Newest First</button></li>
+                <li><button class="pure-button pure-button-active" onClick="sortWeeksOldest();" id="sort-oldest-button">Oldest First</button></li>
+            </ul>
+        </div>
         
-        <button class="pure-button" onClick="sortWeeksNewest();" id="sort-newest-button">Newest First</button>
-        <button class="pure-button pure-button-active" onClick="sortWeeksOldest();" id="sort-oldest-button">Oldest First</button>
         
-        <div class="week" data-week="-1">
+        <div class="pure-menu pure-menu-open">
+            <a href="#" class="pure-menu-heading">Weeks:</a>
+            <ul>
+                <li><a href="#origin">Origin Story</a></li>
+                <li><a href="#week1">Week 1 (26th May – 1st June)</a></li>
+                <li><a href="#week2">Week 2 (2nd June – 8th June)</a></li>
+                <li><a href="#week3">Week 3 (9th June – 15th June)</a></li>
+                <li><a href="#week4">Week 4 (16th June – 22nd June)</a></li>
+                <li><a href="#week5">Week 5 (23rd June – 29th June)</a></li>
+            </ul>
+        </div>
+        
+        <div class="week" data-week="-1" id="origin">
             <h2>Origin Story</h2>
             <p>The team was selected over a five day sandpit event, from February 16th to February 20th. About 30 keen volunteers showed up, and over the week we learned about iGEM, its mission, and what we would be setting out to achieve. We pitched ideas, looked at Human Practices for the first time, and got to know everybody. At the end of the week, the chosen project was voted as ‘radiation-sensitive bacteria’ that would be sent up into space to do… something.</p>
             <p>The following week, the ten members who were chosen got the e-mail they were hoping for, and the team was born. It was glorious.</p>
@@ -259,7 +277,7 @@ wgAjaxWatch={"watchMsg": "Watch", "unwatchMsg": "Unwatch", "watchingMsg": "Watch
             <p>At this point in our story the record goes dark, as we all entered into the exam period and our attentions turned away. We emerged from the exams intact, ready to devote our time to iGEM. We did the research, read the papers, and prepared for the next meeting that would herald the official start of our project.</p>
         </div>
         
-        <div class="week" data-week="1">
+        <div class="week" data-week="1" id="week1">
             <h2>Week 1 (26th May – 1st June)</h2>
 
             <div class="day">
@@ -290,7 +308,7 @@ wgAjaxWatch={"watchMsg": "Watch", "unwatchMsg": "Unwatch", "watchingMsg": "Watch
         </div>
 
 
-        <div class="week" data-week="2">
+        <div class="week" data-week="2" id="week2">
             <h2>Week 2 (2nd June – 8th June)</h2>
             
             <div class="day">
@@ -310,7 +328,7 @@ wgAjaxWatch={"watchMsg": "Watch", "unwatchMsg": "Unwatch", "watchingMsg": "Watch
         </div>
 
 
-        <div class="week" data-week="3">
+        <div class="week" data-week="3" id="week3">
             <h2>Week 3 (9th June – 15th June)</h2>
             
             <div class="day">
@@ -344,7 +362,7 @@ wgAjaxWatch={"watchMsg": "Watch", "unwatchMsg": "Unwatch", "watchingMsg": "Watch
         </div>
 
 
-        <div class="week" data-week="4">
+        <div class="week" data-week="4" id="week4">
             <h2>Week 4 (16th June – 22nd June)</h2>
 
             <div class="day">
@@ -390,7 +408,7 @@ wgAjaxWatch={"watchMsg": "Watch", "unwatchMsg": "Unwatch", "watchingMsg": "Watch
             </div>
         </div>
 
-        <div class="week" data-week="5">
+        <div class="week" data-week="5" id="week5">
             <h2>Week 5 (23rd June – 29th June)</h2>
 
             <div class="day">
